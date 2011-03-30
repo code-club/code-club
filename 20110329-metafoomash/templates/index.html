@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Plonk</title>
+<div>
+<a href="/vote?name={{foos[0].name}}&other={{foos[1].name}}">{{ foos[0] }}</a>
+<a href="/vote?name={{foos[1].name}}&other={{foos[0].name}}">{{ foos[1] }}</a>
+</div>
+
+<div style="margin-top=10px">
+<h3>Classement : </h3>
+<ul>
+{% for foo in list_foos %}
+<li>{{foo}} : {{foo.score}}</li>
+{% endfor %}
+</ul>
+</div>
