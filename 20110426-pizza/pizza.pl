@@ -2,6 +2,37 @@ contient(classique, [origan]).
 contient(reine, [champignon,jambon]).
 contient(campione, [champignon,viande_hachee]).
 contient(torino, [jambon, oeuf]).
+contient(exotique,[jambon,ananas]).
+contient(paysanne,[lardon, oeuf]).
+contient(calzoneSoufflee,[jambon, oeuf]).
+contient(fromagereSoufflee,[brie, gorgonzola, chèvre]).
+contient(neptuneSoufflee,[thon, olive, oeuf]).
+contient(napolitaine,[anchoi, capre, olive]).
+contient(quatrefromages,[brie, gorgonzola, chevre]).
+contient(quatrejambons,[jambon, lardon, pepperoni, chorizo]).
+contient(miami,[poulet, poivron, oignon]).
+contient(orientale,[merguez, oignon, poivron, oeuf]).
+contient(americaine,[bacon, oignon, oeuf, cremeFraiche]).
+contient(aliBaba,[thon, oignon, poivron, oeuf]).
+contient(topPizza,[jambon, lardon, pepperoni, oeuf]).
+contient(pizzaChef,[merguez, viandeHachee, oignon]).
+contient(sicilienne,[jambon, chorizo, champignon, viandeHachee]).
+contient(vulcano,[chevre, anchoi, tomateFraiche]).
+contient(fruitsDeMer,[fdm, ail, persil, citron]).
+contient(texas,[viandeHachee, merguez, chorizo, poivron]).
+contient(sardenia,[poulet, mozzarella, chevre]).
+contient(vegetarienne,[poivron, oignon, artichaut, champignon, tomateFraiche, olive]).
+contient(quatreSaisons,[jambon, champignon, artichaut, olive]).
+contient(forestiere,[champignon, lardon, cremeFraiche]).
+contient(fermiere,[poulet, pommeDeTerre, oeuf]).
+contient(royale,[viandeHachee, oignon, pommeDeTerre, chevre]).
+contient(palerma,[jambon, merguez, champignon, oeuf]).
+contient(romaine,[jambon, merguez, viandeHachee, chorizo, oeuf]).
+contient(bouchere,[viandeHachee, oignon, oeuf, cremeFraiche]).
+contient(enrique,[jambon, chevre, oignon, tomateFraiche, olive]).
+contient(pizzaKebab,[viandeGrecque, tomateFraiche, oignon]).
+contient(western,[chevre, lardon]).
+contient(provencale,[poulet, tomateFraiche, oignon]).
 
 isIngredientDe(P,I) :- contient(P, R), member(I,R).
 
