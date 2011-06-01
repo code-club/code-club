@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="photos">
+    <file>rampin.jpg</file>
+    <file>delorme.jpg</file>
+  </qresource>
+</RCC>
