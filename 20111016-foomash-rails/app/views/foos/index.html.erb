@@ -1,0 +1,25 @@
+<h1>Listing foos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foos.each do |foo| %>
+  <tr>
+    <td><%= foo.name %></td>
+    <td><%= foo.score %></td>
+    <td><%= link_to 'Show', foo %></td>
+    <td><%= link_to 'Edit', edit_foo_path(foo) %></td>
+    <td><%= link_to 'Destroy', foo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foo', new_foo_path %>

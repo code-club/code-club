@@ -1,0 +1,29 @@
+<h1>Listing votes</h1>
+
+<table>
+  <tr>
+    <th>Left</th>
+    <th>Right</th>
+    <th>Vainqueur</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @votes.each do |vote| %>
+  <tr>
+    <td><%= vote.left.name %></td>
+    <td><%= vote.right.name %></td>
+    <td>
+      <%= vote.winner_name %> 
+    </td>
+    <td><%= link_to 'Show', vote %></td>
+    <td><%= link_to 'Edit', edit_vote_path(vote) %></td>
+    <td><%= link_to 'Destroy', vote, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vote', new_vote_path %>
