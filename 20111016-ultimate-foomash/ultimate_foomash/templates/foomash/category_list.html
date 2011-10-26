@@ -1,0 +1,4 @@
+<ul>
+{% for cat in category_list %}
+	<li><a href="{%url foomash.views.mash cat.id%}">{{cat}}</a></li>
+{% endfor %}

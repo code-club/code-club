@@ -1,0 +1,18 @@
+<h2>{{category}}</h2>
+
+
+<form action="{%url foomash.views.vote%}" method="post">
+{% csrf_token %}
+{{left_form}}
+<p><input type="image" src="{{left.photo.url}}" height=200/> {{left}}</p>
+</form>
+<form action="{%url foomash.views.vote%}" method="post">
+{% csrf_token %}
+{{left_form}}
+<p><input type="image" src="{{right.photo.url}}" height=200/>  {{right}}</p>
+</form>
+<ul>
+{% for foo in foos %}
+	<li>{{foo.score}} - {{foo}}</li>
+{% endfor %}
+</ul>
